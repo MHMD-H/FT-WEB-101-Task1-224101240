@@ -1,0 +1,322 @@
+/* Global box-sizing rule */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Colour variables stored on :root */
+:root {
+    --light-bg: #fffbf5;
+    --light-text: #271c15;
+    --light-surface: #ffffff;
+    --light-card-hover: #fef3c7;
+    --light-border: #fde68a;
+
+    --dark-bg: #181411;
+    --dark-text: #fef3c7;
+    --dark-surface: #241e19;
+    --dark-card-hover: #362c24;
+    --dark-border: #524234;
+
+    --primary-color: #d97706;
+    --primary-hover: #b45309;
+    --error-color: #dc2626;
+    --success-color: #16a34a;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode colours on body.dark using variables from :root */
+body.dark {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+/* Header & Navigation Bar */
+header {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 26px 20px 10px;
+}
+
+header h1 {
+    font-size: 1.95rem;
+    margin-bottom: 14px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-surface);
+    border: 1px solid var(--light-border);
+    border-bottom: 3px solid var(--primary-color);
+    padding: 12px 22px;
+    border-radius: 12px;
+}
+
+body.dark .bar {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+    border-bottom-color: var(--primary-color);
+}
+
+.bar-name {
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.bar-links {
+    display: flex;
+    gap: 16px;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.bar-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+body.dark .bar-links a {
+    color: var(--dark-text);
+}
+
+.bar-links a:hover {
+    background-color: var(--light-card-hover);
+}
+
+body.dark .bar-links a:hover {
+    background-color: var(--dark-card-hover);
+}
+
+/* Main Content */
+main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Step 2: Centered Profile Card */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    background-color: var(--light-surface);
+    border: 1px solid var(--light-border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-bottom: 36px;
+}
+
+body.dark .profile-section {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+}
+
+.profile-details {
+    max-width: 600px;
+}
+
+.profile-details h2 {
+    margin-bottom: 8px;
+}
+
+.bio {
+    margin-bottom: 18px;
+}
+
+/* Step 4: Pill-shaped Button */
+#dark-btn,
+.submit-btn {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+#dark-btn:hover,
+.submit-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Step 2: Three Cards in a Row with Flexbox and Gap */
+.cards-section {
+    margin-bottom: 36px;
+}
+
+.cards-section h2,
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 18px;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    background-color: var(--light-surface);
+    border: 1px solid var(--light-border);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 20px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+    background-color: var(--light-card-hover);
+    transform: translateY(-3px);
+}
+
+body.dark .card {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+    border-left-color: var(--primary-color);
+}
+
+body.dark .card:hover {
+    background-color: var(--dark-card-hover);
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+body.dark .card h3 {
+    color: var(--dark-text);
+}
+
+/* Step 3: Form Section */
+.contact-section {
+    background-color: var(--light-surface);
+    border: 1px solid var(--light-border);
+    border-radius: 16px;
+    padding: 26px;
+    max-width: 540px;
+    margin: 0 auto 36px;
+}
+
+body.dark .contact-section {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+}
+
+.hello-line {
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+body.dark .hello-line {
+    color: var(--dark-text);
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--light-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+body.dark .form-group input {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+}
+
+.form-message {
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.form-message.error {
+    color: var(--error-color);
+}
+
+.form-message.success {
+    color: var(--success-color);
+}
+
+/* Step 5: Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--light-border);
+    margin-top: 20px;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body.dark footer {
+    border-top-color: var(--dark-border);
+}
+
+.back-top {
+    margin-left: 10px;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+body.dark .back-top {
+    color: var(--dark-text);
+}
+
+.back-top:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 680px) {
+    .bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+}

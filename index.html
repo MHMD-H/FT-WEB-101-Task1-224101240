@@ -1,0 +1,80 @@
+<!-- Name: Mohamed Hani Mohamed Mahmoud | Student ID: 224101240 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Hani Mohamed Mahmoud - Profile Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header id="top">
+        <h1>Mohamed Hani Mohamed Mahmoud</h1>
+
+        <nav class="bar">
+            <span class="bar-name">Mohamed Hani</span>
+            <div class="bar-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="profile-section">
+            <img src="images/me.jpg" alt="Profile photo of Mohamed Hani Mohamed Mahmoud" class="profile-photo">
+            <div class="profile-details">
+                <h2>Computer Science &amp; Engineering Student</h2>
+                <p class="bio">Studying at New Mansoura University (ID: 224101240). Focused on building clean web interfaces, structured software, and practical problem-solving skills.</p>
+                <button id="dark-btn" type="button">Toggle Dark Mode</button>
+            </div>
+        </section>
+
+        <section id="skills" class="cards-section">
+            <h2>Skills &amp; Hobbies</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Web Development</h3>
+                    <p>Creating responsive layouts using semantic HTML5, CSS3 variables, Flexbox, and interactive JavaScript.</p>
+                </div>
+                <div class="card">
+                    <h3>Programming</h3>
+                    <p>Writing structured code in C++ and Python while practicing algorithms and data structures.</p>
+                </div>
+                <div class="card">
+                    <h3>Hobbies</h3>
+                    <p>Exploring modern UI design, playing football with friends, and learning new developer tools.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Leave a Message</h2>
+            <p id="hello-line" class="hello-line">Hello visitor! Type your name below.</p>
+
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+
+                <input type="submit" id="submit-btn" class="submit-btn" value="Send">
+                <p id="form-message" class="form-message"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mohamed Hani Mohamed Mahmoud (ID: 224101240) - New Mansoura University. <a href="#top" class="back-top">Back to top</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
